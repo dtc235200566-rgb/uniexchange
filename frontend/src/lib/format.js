@@ -21,7 +21,12 @@ export function resolveImageUrl(url) {
   if (!url) {
     return 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80';
   }
-  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('blob:')) {
+  if (
+    url.startsWith('http://') ||
+    url.startsWith('https://') ||
+    url.startsWith('blob:') ||
+    url.startsWith('/demo-images/')
+  ) {
     return url;
   }
   return `${API_BASE}${url.startsWith('/') ? '' : '/'}${url}`;
