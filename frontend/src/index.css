@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+}
+
+/* Custom range slider polish */
+input[type='range'].uni-slider {
+  @apply h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-200 accent-blue-600;
+}
